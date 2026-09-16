@@ -25,4 +25,12 @@ public class EstoqueService {
     public List<EstoqueDTO> getEstoque() {
         return rep.findAll().stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
+
+    public EstoqueDTO getEstoqueById(Long id) {
+        return rep.findById(id).map(EstoqueDTO::create).orElseThrow(() -> new ObjectNotFoundException("Produto nao encontrado no estoque", id));
+    }
+
+    public List<EstoqueDTO> getEstoqueByCategorias(String categorias){
+        return rep.findByCategorias(categorias).stream().map(EstoqueDTO::create).collect(Collectors.toList());
+    }
 }
