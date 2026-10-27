@@ -6,5 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EstoqueRepository extends JpaRepository<Estoque,Long> {
     List<Estoque> findByCategorias(String categorias);
+    List<Estoque> findByName(String name);
+
+    List<Estoque> findByProdutos(String produtos);
     
 }
+

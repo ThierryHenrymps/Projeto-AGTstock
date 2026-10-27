@@ -33,4 +33,12 @@ public class EstoqueService {
     public List<EstoqueDTO> getEstoqueByCategorias(String categorias){
         return rep.findByCategorias(categorias).stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
+
+    public List<EstoqueDTO> getEstoqueByName(String name){
+        return rep.findByName(name).stream().map(EstoqueDTO::create).collect(Collectors.toList());
+    }
+    
+    public List<EstoqueDTO> getEstoqueByProdutos(String produtos){
+        return rep.findByProdutos(produtos).stream().map(EstoqueDTO::create).collect(Collectors.toList());
+    }
 }

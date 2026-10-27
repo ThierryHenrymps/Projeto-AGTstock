@@ -11,6 +11,7 @@ public class EstoqueDTO {
     private Long quantidade;
     private String name;
     private String categorias;
+    private String produtos;
 
     public static EstoqueDTO create (Estoque e){
         ModelMapper modelmapper = new ModelMapper();
