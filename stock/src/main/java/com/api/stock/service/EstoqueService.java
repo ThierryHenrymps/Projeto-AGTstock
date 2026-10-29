@@ -41,4 +41,8 @@ public class EstoqueService {
     public List<EstoqueDTO> getEstoqueByProdutos(String produtos){
         return rep.findByProdutos(produtos).stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
+
+    public Estoque salvar(Estoque estoque){
+        return rep.save(estoque);
+    }
 }
