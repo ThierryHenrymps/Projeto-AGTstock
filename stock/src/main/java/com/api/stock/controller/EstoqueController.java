@@ -20,6 +20,8 @@ import com.api.stock.service.EstoqueService;
 import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 
@@ -71,12 +73,21 @@ public class EstoqueController {
     }
 
     @PostMapping
-    public ResponseEntity<Estoque> salvar(@Valid @RequestBody Estoque estoque) {
-        Estoque estoqueSalvo = service.salvar(estoque);
+    public ResponseEntity<Estoque> save(@Valid @RequestBody Estoque estoque) {
+        Estoque estoqueSalvo = service.save(estoque);
 
         if(estoqueSalvo == null){
             ResponseEntity.notFound().build();
         }return ResponseEntity.status(201).body(estoqueSalvo);
+    }
+
+    @PutMapping("{id}")
+    public  ResponseEntity<Estoque> update(@PathVariable Long id, @Valid @RequestBody Estoque estoque) {
+        Estoque estoqueUpdate = service.update(id, estoque);
+
+        if(estoqueUpdate == null){
+            ResponseEntity.notFound().build();
+        }return ResponseEntity.ok(estoqueUpdate);
     }
 
 

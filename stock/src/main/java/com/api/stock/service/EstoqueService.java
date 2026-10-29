@@ -42,7 +42,21 @@ public class EstoqueService {
         return rep.findByProdutos(produtos).stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
 
-    public Estoque salvar(Estoque estoque){
+    public Estoque save(Estoque estoque){
         return rep.save(estoque);
+    }
+
+    public Estoque update(Long id, Estoque estoque){
+        Estoque estoqueExisting = rep.findById(id).orElse(null);
+        if(estoqueExisting == null){
+            return null;
+        }
+
+        estoqueExisting.setName(estoque.getName());
+        estoqueExisting.setPreco(estoque.getPreco());
+        estoqueExisting.setQuantidade(estoque.getQuantidade());
+        estoqueExisting.setCategorias(estoque.getCategorias());
+
+        return rep.save(estoqueExisting);
     }
 }
