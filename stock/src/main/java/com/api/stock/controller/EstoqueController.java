@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -81,13 +82,21 @@ public class EstoqueController {
         }return ResponseEntity.status(201).body(estoqueSalvo);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public  ResponseEntity<Estoque> update(@PathVariable Long id, @Valid @RequestBody Estoque estoque) {
         Estoque estoqueUpdate = service.update(id, estoque);
 
         if(estoqueUpdate == null){
             ResponseEntity.notFound().build();
         }return ResponseEntity.ok(estoqueUpdate);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        if(!service.delete(id)){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.noContent().build();
     }
 
 

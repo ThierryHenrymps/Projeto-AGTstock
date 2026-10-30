@@ -59,4 +59,13 @@ public class EstoqueService {
 
         return rep.save(estoqueExisting);
     }
+
+     public boolean delete(Long id){
+        if(!rep.existsById(id)) {
+            return false;
+        }
+        rep.deleteById(id);
+        return true;
+    }
+
 }

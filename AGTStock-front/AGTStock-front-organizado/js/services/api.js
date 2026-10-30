@@ -1,5 +1,3 @@
-// Serviço central da API.
-// Quando o Spring Boot estiver pronto, altere apenas esta configuração.
 const API = {
   baseURL: "http://localhost:8080/api/v1",
 
@@ -18,8 +16,3 @@ const API = {
   delete(endpoint) { return this.request(endpoint,{method:"DELETE"}); }
 };
 
-// Exemplos para ligar ao Spring depois:
-// API.get("/produtos")
-// API.post("/produtos", produto)
-// API.put("/produtos/" + id, produto)
-// API.delete("/produtos/" + id)
