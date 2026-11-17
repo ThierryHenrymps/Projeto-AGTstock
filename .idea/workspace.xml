@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a52297a5-0539-48a5-aa10-df663c0151ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGTStock-front/AGTStock-front-organizado/js/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/AGTStock-front/AGTStock-front-organizado/js/services/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/controller/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/controller/EstoqueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/dto/EstoqueDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/dto/EstoqueDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/service/Estoque.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/service/EstoqueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/service/EstoqueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/service/EstoqueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/java/com/api/stock/service/EstoqueService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
