@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 import com.api.stock.dto.EstoqueDTO;
-import com.api.stock.service.Estoque;
+import com.api.stock.model.Estoque;
 import com.api.stock.service.EstoqueService;
 
 import jakarta.validation.Valid;

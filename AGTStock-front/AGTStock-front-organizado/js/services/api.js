@@ -1,5 +1,5 @@
 const API = {
-  baseURL: "http://localhost:8080/api/v1",
+  baseURL: "http://localhost:8080/api/v1/estoque",
 
   async request(endpoint, options = {}) {
     const response = await fetch(this.baseURL + endpoint, {

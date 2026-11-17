@@ -1,4 +1,4 @@
-package com.api.stock.service;
+package com.api.stock.model;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -25,6 +25,7 @@ public class Estoque {
     private Double preco;
     private String name;
     private String categorias;
+    private String produto;
     
         
 }

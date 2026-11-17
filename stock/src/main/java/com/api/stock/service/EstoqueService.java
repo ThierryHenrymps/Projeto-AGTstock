@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.api.stock.dto.EstoqueDTO;
+import com.api.stock.model.Estoque;
+
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -39,7 +41,7 @@ public class EstoqueService {
     }
     
     public List<EstoqueDTO> getEstoqueByProdutos(String produtos){
-        return rep.findByProdutos(produtos).stream().map(EstoqueDTO::create).collect(Collectors.toList());
+        return rep.findByProduto(produtos).stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
 
     public Estoque save(Estoque estoque){

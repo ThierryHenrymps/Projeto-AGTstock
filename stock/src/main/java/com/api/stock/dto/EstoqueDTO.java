@@ -1,8 +1,10 @@
 package com.api.stock.dto;
 
 import lombok.Data;
-import com.api.stock.service.Estoque;
+
 import org.modelmapper.ModelMapper;
+
+import com.api.stock.model.Estoque;
 
 @Data 
 public class EstoqueDTO {
