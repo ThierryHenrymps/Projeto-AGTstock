@@ -1,4 +1,4 @@
-package com.api.stock.service;
+package repository;
 
 import java.util.List;
 

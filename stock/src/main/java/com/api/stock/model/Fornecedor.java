@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import jakarta.persistence.*;
 @Entity 
 @Table(name = "fornecedores")
-public class fornecedor {
+public class Fornecedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +20,10 @@ public class fornecedor {
     @Column(name = "data_cadastro", updatable = false)
     private LocalDateTime dataCadastro;
 
-    public fornecedor() {
+    public Fornecedor() {
     }
 
-    public fornecedor(String nome, String cnpj, String telefone, String email, String endereco) {
+    public Fornecedor(String nome, String cnpj, String telefone, String email, String endereco) {
         this.nome = nome;
         this.cnpj = cnpj;
         this.telefone = telefone;

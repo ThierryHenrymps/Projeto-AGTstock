@@ -1,4 +1,4 @@
-package com.api.stock.service;
+package repository;
 
 import com.api.stock.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
