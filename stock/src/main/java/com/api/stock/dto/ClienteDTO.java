@@ -2,11 +2,13 @@ package com.api.stock.dto;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 import org.modelmapper.ModelMapper;
 
 import com.api.stock.model.Estoque;
 
-@Data
+@Data 
 
 public class ClienteDTO{
 
@@ -16,10 +18,9 @@ public class ClienteDTO{
     private String telefone;
     private String email;
     private String endereco;
-    @Column(name = "data_cadastro", updatable = false)
     private LocalDateTime dataCadastro;
 
-    public static ClienteDTO create (Cliente c){
+    public static ClienteDTO create (ClienteDTO c){
         ModelMapper modelmapper = new ModelMapper();
         return modelmapper.map(c, ClienteDTO.class);
 
