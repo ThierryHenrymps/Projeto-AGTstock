@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 import org.modelmapper.ModelMapper;
 
+import com.api.stock.model.Cliente;
 import com.api.stock.model.Estoque;
 
 @Data 
@@ -20,9 +21,8 @@ public class ClienteDTO{
     private String endereco;
     private LocalDateTime dataCadastro;
 
-    public static ClienteDTO create (ClienteDTO c){
-        ModelMapper modelmapper = new ModelMapper();
-        return modelmapper.map(c, ClienteDTO.class);
-
+    public static ClienteDTO create(Cliente c) {
+    ModelMapper modelmapper = new ModelMapper();
+    return modelmapper.map(c, ClienteDTO.class);
     }
 }
