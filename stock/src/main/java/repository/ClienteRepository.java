@@ -12,5 +12,10 @@ public interface ClienteRepository  extends JpaRepository<Cliente, Long> {
 
     List<ClienteDTO> getClientById(Long id);
     
+    List<ClienteDTO> getClientByEmail(String email);
+
+    List<ClienteDTO> getClientByNumber(String number);
+
+    List<ClienteDTO> getClientByEndereco(String endereco);
     
 }

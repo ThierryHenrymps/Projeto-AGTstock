@@ -37,6 +37,41 @@ public class ClienteController {
         return ResponseEntity.ok(cliente);
     }
 
+    @GetMapping("/email{email}")
+    public ResponseEntity <List<ClienteDTO>> getByEmail(@PathVariable ("email") String email ) {
+        List<ClienteDTO> cliente = repository.getClientByEmail(email);
+        
+        return cliente.isEmpty() ?
+        ResponseEntity.noContent().build():
+        ResponseEntity.ok(cliente);
+    }
+
+    @GetMapping("/number{number}")
+    public ResponseEntity <List<ClienteDTO>> getByNumber(@PathVariable ("number") String number) {
+        List<ClienteDTO> cliente = repository.getClientByNumber(number);
+
+        return cliente.isEmpty() ?
+        ResponseEntity.noContent().build():
+        ResponseEntity.ok(cliente);
+    }
+
+    @GetMapping("/endereco{endereco}")
+    public ResponseEntity <List<ClienteDTO>> getByEndereco(@PathVariable ("endereco") String endereco) {
+        List<ClienteDTO> cliente = repository.getClientByEndereco(endereco);
+
+        return cliente.isEmpty() ?
+        ResponseEntity.noContent().build():
+        ResponseEntity.ok(cliente);
+    }
+    
+
+
+    
+    
+    
+
+
+
     
     
 }
