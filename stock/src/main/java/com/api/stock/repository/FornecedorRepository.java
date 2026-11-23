@@ -1,4 +1,4 @@
-package repository;
+package com.api.stock.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

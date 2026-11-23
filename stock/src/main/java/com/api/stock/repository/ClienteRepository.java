@@ -1,4 +1,4 @@
-package repository;
+package com.api.stock.repository;
 
 import com.api.stock.dto.ClienteDTO;
 import com.api.stock.model.Cliente;
@@ -14,7 +14,7 @@ public interface ClienteRepository  extends JpaRepository<Cliente, Long> {
     
     List<ClienteDTO> getClientByEmail(String email);
 
-    List<ClienteDTO> getClientByNumber(String number);
+    List<ClienteDTO> getClientByTelefone(String telefone);
 
     List<ClienteDTO> getClientByEndereco(String endereco);
     

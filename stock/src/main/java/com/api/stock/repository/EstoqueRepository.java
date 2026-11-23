@@ -1,4 +1,4 @@
-package repository;
+package com.api.stock.repository;
 
 import java.util.List;
 
